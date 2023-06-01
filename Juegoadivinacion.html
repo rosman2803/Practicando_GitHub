@@ -1,0 +1,35 @@
+<html>
+<h1>Juegos Para adivinar un numero </h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    function sorteo(n) {
+
+        return Math.round(Math.random() * n);
+    }
+    var numeroPensado = sorteo(10);
+    var numeroLanzado = parseInt(prompt('Ingrese un numero entre 0/10'))
+
+
+    if (numeroPensado == numeroLanzado) {
+        imprimir('Usted acerto');
+
+    } else {
+        if (numeroLanzado > numeroPensado) {
+            imprimir('usted erro el mumero pensado era menor que tu numero');
+        } else {
+            imprimir('Usted erro el numero');
+
+        }
+    }
+
+</script>
+
+</html>
